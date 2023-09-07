@@ -1,0 +1,12 @@
+.idea
+.vscode
+*.log
+*.iml
+*.zip
+src/Test.php
+src/Test
+vendor/
+.phpintel
+index.php
+composer.lock
+checkout-page.html
