@@ -7,6 +7,7 @@ use Xenon\NagadApi\Helper;
 require 'vendor/autoload.php';
 
 if (isset($_POST['nagad-payment'])) {
+
     /**
      * ==============================================================================
      * all configuration are used here for demo purpose.
@@ -28,7 +29,7 @@ if (isset($_POST['nagad-payment'])) {
         $nagad = new Base($config, [
             'amount' => $_POST['price'],
             'invoice' => Helper::generateFakeInvoice(15, true),
-            'merchantCallback' => 'http://localhost/nagad/nagad-payment-status.php',
+            'merchantCallback' => 'http://localhost/nagad-demo-payment/nagad-payment-status.php',
         ]);
 
         $status = $nagad->payNow($nagad);
